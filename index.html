@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Text Hollingsworth Lawn Maintenance</title>
+
+  <!-- Basic SEO -->
+  <meta name="robots" content="noindex" />
+
+  <style>
+    body { font-family: Arial, sans-serif; padding: 24px; line-height: 1.4; }
+    a { word-break: break-word; }
+  </style>
+</head>
+<body>
+  <h2>Opening your Messages app…</h2>
+  <p>If nothing happens, tap the link below:</p>
+
+  <p>
+    <a id="fallback" href="#">Text (989) 272-3301</a>
+  </p>
+
+  <script>
+    // Your phone + message
+    const phone = "+19892723301";
+    const msg = "Hi! I am interested in lawn service. I would like to schedule a free on-site estimate.";
+
+    // iPhone likes sms:+1...&body=...  (some Androids like ?body=)
+    const smsLink = `sms:${phone}&body=${encodeURIComponent(msg)}`;
+
+    // Set fallback link
+    document.getElementById("fallback").href = smsLink;
+
+    // Try to auto-open Messages
+    window.location.href = smsLink;
+
+    // If browser blocks it, user can click fallback
+  </script>
+</body>
+</html>

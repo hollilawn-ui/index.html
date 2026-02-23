@@ -1,0 +1,146 @@
+:root{
+  --bg:#2f2f2f;
+  --panel:#3a3a3a;
+  --text:#f3f3f3;
+  --muted:#cfcfcf;
+  --link:#ffffff;
+  --max:980px;
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+a{ color: var(--link); text-decoration: underline; }
+.container{ max-width: var(--max); margin: 0 auto; padding: 0 18px; }
+
+/* Top bar */
+.topbar{
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #252525;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+.topbar-inner{
+  height: 56px;
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  gap:12px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 700;
+}
+.brand img{
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Hero */
+.hero{
+  min-height: 340px;
+  display:flex;
+  align-items:flex-end;
+  padding: 28px 0;
+  background-size: cover;
+  background-position: center;
+}
+.hero-overlay{
+  width: 100%;
+  background: linear-gradient(to top, rgba(0,0,0,.55), rgba(0,0,0,.10));
+  padding: 26px 0 18px;
+}
+.hero h1{
+  margin:0;
+  font-size: 44px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.hero h2{
+  margin: 10px 0 0;
+  font-size: 26px;
+  font-weight: 300;
+  color: var(--muted);
+}
+
+/* Sections */
+.section{
+  padding: 34px 0;
+  background: var(--bg);
+}
+.panel{
+  background: transparent;
+}
+.section-title{
+  text-align:center;
+  font-size: 34px;
+  font-weight: 700;
+  margin: 0 0 18px;
+}
+
+/* Lists like your services */
+.bullets{
+  margin: 18px auto 0;
+  max-width: 520px;
+  font-size: 20px;
+  line-height: 1.9;
+}
+.bullets li{ margin: 2px 0; }
+
+/* Button */
+.btnrow{ display:flex; justify-content:center; margin: 18px 0 0; }
+.btn{
+  display:inline-block;
+  padding: 12px 18px;
+  border: 1px solid rgba(255,255,255,.65);
+  border-radius: 4px;
+  text-decoration:none;
+  font-weight: 700;
+  color: var(--text);
+  background: rgba(255,255,255,.06);
+}
+
+/* Images */
+.gallery{
+  display:flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 18px;
+}
+.gallery img{
+  width: 100%;
+  border-radius: 3px;
+  border: 1px solid rgba(255,255,255,.08);
+}
+
+/* Footer / Contact block */
+.center{
+  text-align:center;
+}
+.bigline{
+  font-size: 34px;
+  font-weight: 800;
+  margin: 0;
+}
+.subline{
+  margin: 10px 0 18px;
+  color: var(--muted);
+  font-size: 16px;
+}
+.contact{
+  margin-top: 18px;
+  font-size: 20px;
+  line-height: 1.9;
+}
